@@ -1,3 +1,7 @@
+a{
+    text-decoration: none;
+}
+
 .navigation-field{
     background:var(--c-black);
     grid-area:nav;
@@ -20,15 +24,11 @@
     font-size:1.2rem;
     font-weight:700;
     text-align:center;
+    color:var(--c-white);
 
     cursor:pointer;
     background: var(--c-navbar-btn);
     transition: background .2s, border-color .2s;
-
-}
-.navigation-field__nav-item a{
-    text-decoration:none;
-    color:var(--c-white);
 }
 .navigation-field__nav-item:hover{
     background:var(--c-dark-blue);
