@@ -1,0 +1,5 @@
+.header{
+    background: var(--c-gradient-bg);
+    grid-area: head;
+    display:flex;
+}

@@ -1,0 +1,9 @@
+.search-bar{
+    width:40vw;
+    padding:.8rem .5rem .8rem 1rem;
+    border-style: none;
+    border-radius: 5px;
+    font-weight:600;
+    font-size:1.2rem;
+    color:var(--c-dark-grey);
+}
