@@ -9,7 +9,7 @@ function Navbar() {
 			<ul className='navigation-field__nav-list'>
 				<Link to='/'>
 					<li className='navigation-field__nav-item'>
-						Home
+						Genres
 					</li>
 				</Link>
 				<Link to='/favourites'>

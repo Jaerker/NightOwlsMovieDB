@@ -1,7 +1,7 @@
 function SingleMoviePage() {
-  return (
-    <div>SingleMoviePage</div>
-  );
+	return (
+		<div>SingleMoviePage</div>
+	);
 }
 
 export default SingleMoviePage;
