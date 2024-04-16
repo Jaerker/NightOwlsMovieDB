@@ -5,6 +5,7 @@ axios.defaults.baseURL = 'https://api.themoviedb.org/3';
 axios.defaults.headers['Authorization'] = `Bearer ${authenticationKey}`;
 
 const list = {
+    searchByGenre : (genreId, page=1) => axios.get(`/discover/movie?include_adult=false&include_video=false&language=en-US&page=${page}&with_genres=${genreId}`).then(res => res.data).catch(err => console.log(err)),
     searchByTitle : (title, page=1) => axios.get(`/search/movie?query=${title}&include_adult=false&page=${page}`).then(res => res.data).catch(err => console.log(err)),
     getTopRated : (page =1) => axios.get(`/discover/movie?include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=popularity.desc`).then(res => res.data).catch(err => console.log(err)),
     getTrending : (page = 1) => axios.get(`/trending/movie/week?include_adult=false&page=${page}`).then(res => res.data).catch(err => console.log(err)),
