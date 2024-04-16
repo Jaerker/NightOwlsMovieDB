@@ -19,7 +19,6 @@
     font-family:var(--f-inter);
 }
 #root{
-    max-width: 1880px;
     min-height:100vh;
     display:grid;
     grid-template-columns: 300px 1fr;
