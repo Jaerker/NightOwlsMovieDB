@@ -21,7 +21,7 @@ const SearchBar = () => {
 	return (
 		<section className='placeholder'>
 			<form action={`/search/${input}`} >
-				<input placeholder='Search...' value={input} onChange={(e) => handleSearch(e.target.value)} className="search-bar" />
+				<input aria-label='Searchbar' placeholder='Search...' value={input} onChange={(e) => handleSearch(e.target.value)} className="search-bar" />
 			</form>
 		</section>
 	);
