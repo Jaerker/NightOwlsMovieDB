@@ -1,0 +1,29 @@
+.round-button{
+    display:grid;
+    place-content:center;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    
+    background-color: var(--c-black);
+    color: var(--c-white);
+    cursor: pointer;
+}
+.card__top-right-buttons{
+    display:flex;
+    position:absolute;
+    right:1rem;
+    gap: .5rem;
+
+}
+.round-button--rating{
+    cursor:default;
+    position:absolute;
+    border: solid 1px var(--c-white);
+    bottom:1rem;
+    right:1rem;
+}
+.rating{
+    font-weight:700;
+    font-size:1.3rem;
+}

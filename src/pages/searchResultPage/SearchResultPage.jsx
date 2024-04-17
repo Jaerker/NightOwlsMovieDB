@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom'
 import agent from '../../api/agent';
 import CardContainer from '../../components/cardContainer/CardContainer';
 import Card from '../../components/card/Card';
+import { Link } from "react-router-dom";
+
 
 function SearchResultPage() {
 	const { searchValue } = useParams();
@@ -25,7 +27,7 @@ function SearchResultPage() {
 				))}
 			</CardContainer>
 		</>
-	)
+	);
 }
 
 export default SearchResultPage;

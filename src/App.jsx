@@ -19,7 +19,7 @@ function App() {
 
 			<Header />
 			<Navbar />
-			<main className='main placeholder'>
+			<main className='main'>
 				<Routes>
 
 					<Route path='/' element={<HomePage />} />

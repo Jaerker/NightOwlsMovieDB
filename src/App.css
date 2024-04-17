@@ -1,5 +1,6 @@
-:root {
-    --c-gradient-bg: linear-gradient(.25turn, #9134A5 0%, #0D7A95 100%);
+
+:root{
+    --c-gradient-bg: linear-gradient(.25turn, #9134A5 0%, #0D7A95 100%); 
     --c-black: #000000;
     --c-white: #FFFFFF;
     --c-light-blue: #93C5FD;
