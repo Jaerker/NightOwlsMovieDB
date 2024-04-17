@@ -24,6 +24,7 @@ function HomePage() {
 					{data.length === 0 && <p className='loading-message'>Loading...</p>}
 					
 					{data.map((movie, index) => (
+						
 						<Card key={index} movie={movie} />
 					))}
 				</CardContainer>
