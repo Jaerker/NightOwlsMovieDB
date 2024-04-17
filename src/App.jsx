@@ -17,7 +17,7 @@ function App() {
 		<Router>
 			<Header />
 			<Navbar />
-			<main className='main placeholder'>
+			<main className='main'>
 				<Routes>
 					<Route path='/' element={<HomePage />} />
 					<Route path='/genres' element={<GenresPage />} />

@@ -1,8 +1,13 @@
 import './card.css';
 
-function Card() {
+function Card({movie}) {
+
+	console.log(movie);
 	return (
-		<div>Card</div>
+		<section className='card'>
+			<h3>{movie.title}</h3>
+			
+		</section>
 	);
 }
 

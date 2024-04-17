@@ -1,0 +1,16 @@
+.card{
+    aspect-ratio: 1 / 1.5;
+    width:100%;
+    min-width:200px;
+    max-width:300px;
+    padding:1rem;
+    
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+    background-color: #fff;
+    transition: all 0.3s;
+}
