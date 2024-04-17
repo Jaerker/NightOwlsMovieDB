@@ -6,7 +6,7 @@ function Navbar() {
 	return (
 		<nav className='navigation-field'>
 			<Link to='/'>
-			<img src={Logo} alt='Företagslogga, bild på en uggla.' />
+				<img src={Logo} alt='Företagslogga, bild på en uggla.' />
 			</Link>
 			<ul className='navigation-field__nav-list'>
 				<Link to='/genres'>
