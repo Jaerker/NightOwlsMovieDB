@@ -1,13 +1,21 @@
+.movie-container {
+    display: grid;
+    grid-template-areas: 'top top'
+                        'bottom bottom';
+}
+
 .single-movie-item {
     display: flex;
     align-items: stretch;
     gap: 20px;
-    margin: 0 auto;
+    margin: 1rem;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 20px;
+    padding: 3.4rem;
     flex-wrap: wrap;
+    grid-area: top;
+    border-radius: 10px;
 }
 
 .movie-poster {
@@ -29,8 +37,9 @@
     max-width: 400px;
     min-width: 300px;
     color: var(--c-white);
-    text-align: justify;
+    text-align: left;
     margin: 0 auto;
+    font-size: 18px;
 }
 
 .movie-info-link {
@@ -42,21 +51,21 @@
 .single-movie-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin: 0 auto;
+    gap: 2rem;
 }
 
 .movie-button {
-    padding: 0.2rem 2rem;
+    padding: 0.8rem 1.4rem;
     border-radius: 0.3rem;
     border: solid rgba(0, 0, 255, 0);
     font-size: 16px;
     cursor: pointer;
-    background-color: var(--c-light-blue);
+    background-color: rgb(89, 89, 248);
+    color: white;
 }
 
 .movie-button:hover {
-    background-color: #9134A5;
+    background-color: #bd49d7;
     color: var(--c-white);
 }
 
@@ -68,11 +77,17 @@
     display: flex;
     justify-content: center;
     border-radius: 1rem;
-    max-width: 100%;
-    margin: 1rem;
+    padding: 2rem;
+    grid-area: bottom;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 iframe {
     border-radius: 1rem;
     max-width: 100%;
+}
+
+.no-movie-msg {
+    align-self: center;
 }
