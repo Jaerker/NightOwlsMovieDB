@@ -22,6 +22,11 @@ function Navbar() {
 						Watchlist
 					</li>
 				</Link>
+				<Link to='/search'>
+					<li className='navigation-field__nav-item'>
+						Search
+					</li>
+				</Link>
 			</ul>
 		</nav>
 
