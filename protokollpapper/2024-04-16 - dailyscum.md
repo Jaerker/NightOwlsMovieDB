@@ -1,5 +1,10 @@
 # Daily Scrum 2024-04-16
 
+### Närvarande:
+* Sandra
+* Diliara
+* Johan
+
 ## Sandra 
 
 - Vad har jag gjort? 
