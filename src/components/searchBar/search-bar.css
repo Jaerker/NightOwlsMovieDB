@@ -8,3 +8,31 @@
     color: var(--c-dark-grey);
 
 }
+
+
+.movie_wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.movie__title {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.movie__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.movie__image {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+    margin-top: 5px;
+}
