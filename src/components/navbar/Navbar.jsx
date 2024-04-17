@@ -5,9 +5,11 @@ import './navbar.css'
 function Navbar() {
 	return (
 		<nav className='navigation-field'>
+			<Link to='/'>
 			<img src={Logo} alt='Företagslogga, bild på en uggla.' />
+			</Link>
 			<ul className='navigation-field__nav-list'>
-				<Link to='/'>
+				<Link to='/genres'>
 					<li className='navigation-field__nav-item'>
 						Genres
 					</li>
@@ -22,9 +24,9 @@ function Navbar() {
 						Watchlist
 					</li>
 				</Link>
-				<Link to='/search'>
+				<Link to='/trending'>
 					<li className='navigation-field__nav-item'>
-						Search
+						Trending
 					</li>
 				</Link>
 			</ul>
