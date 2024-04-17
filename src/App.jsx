@@ -24,7 +24,7 @@ function App() {
 
 					<Route path='/' element={<HomePage />} />
 					<Route path='/genres' element={<GenresPage />} />
-					<Route path="/search/:id" element={<SearchResultPage />} />
+					<Route path="/search/:searchValue" element={<SearchResultPage />} />
 					<Route path='/watchlist' element={<WatchlistPage />} />
 					<Route path='/favourites' element={<FavouritesPage />} />
 					<Route path='/movie/:id' element={<SingleMoviePage />} />

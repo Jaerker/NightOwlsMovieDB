@@ -3,25 +3,14 @@ import './search-bar.css';
 import { useState } from 'react';
 import agent from '../../api/agent';
 
-
-
 const SearchBar = () => {
 	const [input, setInput] = useState('');
 
+	const fetchData = async (value) => {
+		const data = await agent.list.searchByTitle(value);
 
-
-	const fetchData = (value) => {
-		agent.list.searchByTitle(value)
-			.then((data) => {
-				console.log(data);
-
-			})
-			.catch((error) => {
-				console.error('Error fetching data:', error);
-			});
+		console.log(data);
 	};
-
-
 
 	const handleSearch = (value) => {
 		setInput(value);
@@ -31,7 +20,9 @@ const SearchBar = () => {
 
 	return (
 		<section className='placeholder'>
-			<input placeholder='Search...' value={input} onChange={(e) => handleSearch(e.target.value)} className="search-bar" />
+			<form action={`/search/${input}`} >
+				<input placeholder='Search...' value={input} onChange={(e) => handleSearch(e.target.value)} className="search-bar" />
+			</form>
 		</section>
 	);
 }
