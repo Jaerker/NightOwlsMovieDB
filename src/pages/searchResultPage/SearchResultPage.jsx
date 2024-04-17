@@ -1,7 +1,11 @@
+
+
 function SearchResultPage() {
 	return (
-		<div>SearchResultPage</div>
-	);
+		<div>
+
+		</div>
+	)
 }
 
-export default SearchResultPage;
+export default SearchResultPage
