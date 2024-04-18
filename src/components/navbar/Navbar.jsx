@@ -1,13 +1,14 @@
-import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.svg';
 import './navbar.css'
 
 function Navbar() {
 	return (
 		<nav className='navigation-field'>
-			<img src={Logo} alt='Företagslogga, bild på en uggla.' className="logo"/>
+			<Link to='/'>
+				<img src={Logo} alt='Företagslogga, bild på en uggla.' className="logo"/>
+			</Link>
 			<ul className='navigation-field__nav-list'>
-				<Link to='/'>
+				<Link to='/genres'>
 					<li className='navigation-field__nav-item'>
 						Genres
 					</li>
@@ -20,6 +21,11 @@ function Navbar() {
 				<Link to='/watchlist'>
 					<li className='navigation-field__nav-item'>
 						Watchlist
+					</li>
+				</Link>
+				<Link to='/trending'>
+					<li className='navigation-field__nav-item'>
+						Trending
 					</li>
 				</Link>
 			</ul>

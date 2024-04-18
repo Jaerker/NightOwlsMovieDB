@@ -1,12 +1,33 @@
-import './search-bar.css';
 
-function SearchBar() {
+import './search-bar.css';
+import { useState } from 'react';
+import agent from '../../api/agent';
+
+const SearchBar = () => {
+	const [input, setInput] = useState('');
+
+	const fetchData = async (value) => {
+		const data = await agent.list.searchByTitle(value);
+
+		console.log(data);
+	};
+
+	const handleSearch = (value) => {
+		setInput(value);
+		fetchData(value);
+
+	}
+
 	return (
 		<section className='placeholder'>
-			<input type='text' className="search-bar" placeholder='Search...' />
-
+			<form action={`/search/${input}`} >
+				<input aria-label='Searchbar' placeholder='Search...' value={input} onChange={(e) => handleSearch(e.target.value)} className="search-bar" />
+			</form>
 		</section>
 	);
 }
 
 export default SearchBar;
+
+
+

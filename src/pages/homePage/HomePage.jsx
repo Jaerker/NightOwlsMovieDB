@@ -3,6 +3,8 @@ import NewsItem from "../../components/newsItem/NewsItem";
 import TestItem from "../../components/testItem/TestItem";
 
 function HomePage() {
+
+
 	return (
 		<div>
 			<TestItem />
@@ -13,5 +15,3 @@ function HomePage() {
 }
 
 export default HomePage;
-
-
