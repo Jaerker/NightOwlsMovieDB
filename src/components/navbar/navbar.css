@@ -6,10 +6,11 @@ a {
     margin: 1rem 0 2rem 0;
 }
 
-.navigation-field{
+.navigation-field {
     background: rgba(21, 21, 61, 0.824);
-    grid-area:nav;
-    max-width:300px;
+    grid-area: nav;
+    max-width: 300px;
+}
 
 .navigation-field__nav-list {
     list-style: none;
@@ -29,11 +30,12 @@ a {
     font-weight: 700;
     text-align: center;
     color: var(--c-white);
-    cursor:pointer;
+    cursor: pointer;
     background: rgba(182, 44, 232, 0.568);
     transition: background .2s, border-color .2s;
 }
-.navigation-field__nav-item:hover{
+
+.navigation-field__nav-item:hover {
     background: rgba(181, 23, 238, 0.971);
     border-color: var(--c-blue);
 }

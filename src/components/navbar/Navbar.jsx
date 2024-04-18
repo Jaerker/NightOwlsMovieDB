@@ -1,11 +1,12 @@
 import Logo from '../../assets/logo.svg';
 import './navbar.css'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
 	return (
 		<nav className='navigation-field'>
 			<Link to='/'>
-				<img src={Logo} alt='Företagslogga, bild på en uggla.' className="logo"/>
+				<img src={Logo} alt='Företagslogga, bild på en uggla.' className="logo" />
 			</Link>
 			<ul className='navigation-field__nav-list'>
 				<Link to='/genres'>
