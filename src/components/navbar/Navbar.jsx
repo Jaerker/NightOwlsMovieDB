@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.svg';
 import './navbar.css'
 
@@ -6,7 +5,7 @@ function Navbar() {
 	return (
 		<nav className='navigation-field'>
 			<Link to='/'>
-				<img src={Logo} alt='Företagslogga, bild på en uggla.' />
+				<img src={Logo} alt='Företagslogga, bild på en uggla.' className="logo"/>
 			</Link>
 			<ul className='navigation-field__nav-list'>
 				<Link to='/genres'>

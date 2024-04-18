@@ -1,15 +1,16 @@
-import { useEffect, useState } from "react";
-import agent from "../../api/agent";
-
-import './home-page.css';
+import BirthdaysItem from "../../components/birthdaysItem/BirthdaysItem";
+import NewsItem from "../../components/newsItem/NewsItem";
+import TestItem from "../../components/testItem/TestItem";
 
 function HomePage() {
 
 
 	return (
-		<>
-			Homepage
-		</>
+		<div>
+			<TestItem />
+			<BirthdaysItem />
+			<NewsItem />
+		</div>
 	);
 }
 
