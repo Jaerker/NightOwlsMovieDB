@@ -1,29 +1,40 @@
-.round-button{
-    display:grid;
-    place-content:center;
-    width:50px;
-    height:50px;
+.round-button {
+    display: grid;
+    place-content: center;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    
     background-color: var(--c-black);
     color: var(--c-white);
     cursor: pointer;
 }
-.card__top-right-buttons{
-    display:flex;
-    position:absolute;
-    right:1rem;
-    gap: .5rem;
 
+.card__top-right-buttons {
+    display: flex;
+    position: absolute;
+    right: 0.8rem;
+    gap: .5rem;
 }
-.round-button--rating{
-    cursor:default;
-    position:absolute;
+
+.plus {
+    width: 20px;
+    height: 20px;
+}
+
+.card__top-right-buttons img {
+    width: 25px;
+}
+
+
+.round-button--rating {
+    cursor: default;
+    position: absolute;
     border: solid 1px var(--c-white);
-    bottom:1rem;
-    right:1rem;
+    bottom: 1rem;
+    right: 1rem;
 }
-.rating{
-    font-weight:700;
-    font-size:1.3rem;
+
+.rating {
+    font-weight: 700;
+    font-size: 0.9rem;
 }

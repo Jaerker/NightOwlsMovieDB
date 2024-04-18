@@ -1,6 +1,5 @@
-
-:root{
-    --c-gradient-bg: linear-gradient(.25turn, #9134A5 0%, #0D7A95 100%); 
+:root {
+    --c-gradient-bg: linear-gradient(.25turn, #9134A5 0%, #0D7A95 100%);
     --c-black: #000000;
     --c-white: #FFFFFF;
     --c-light-blue: #93C5FD;
@@ -24,7 +23,7 @@
 #root {
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 260px 1fr;
     grid-template-rows: 200px 1fr;
     grid-template-areas:
         "nav head"

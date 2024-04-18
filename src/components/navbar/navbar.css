@@ -4,12 +4,14 @@ a {
 
 .logo {
     margin: 1rem 0 2rem 0;
+    width: 260px;
+
 }
 
 .navigation-field {
     background: rgba(21, 21, 61, 0.824);
     grid-area: nav;
-    max-width: 300px;
+    max-width: 260px;
 }
 
 .navigation-field__nav-list {
@@ -25,7 +27,6 @@ a {
     padding: 1rem 0;
     border: solid 2px transparent;
     border-radius: 5px;
-
     font-size: 1.2rem;
     font-weight: 700;
     text-align: center;

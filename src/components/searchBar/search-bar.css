@@ -6,7 +6,11 @@
     font-weight: 600;
     font-size: 1.2rem;
     color: var(--c-dark-grey);
+}
 
+input:focus {
+    outline: none;
+    border: 2px solid #813ca3;
 }
 
 
