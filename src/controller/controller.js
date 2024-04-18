@@ -9,3 +9,4 @@ export const isInWatchlist = (movieId) => {
     const watchlist = local.watchlist.getIds();
     return watchlist.some(movie => movie === movieId);
 }
+
