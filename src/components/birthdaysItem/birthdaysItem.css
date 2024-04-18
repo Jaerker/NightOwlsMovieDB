@@ -1,7 +1,9 @@
 .bd-container {
     background-color: rgba(244, 250, 252, 0.916);
-    margin: 1rem;
+    margin: 1rem auto;
     border-radius: 10px;
+    max-width: 600px;
+    padding: 1rem;
 }
 
 .birth-heading {
@@ -15,7 +17,7 @@
 .birthdays {
     display: flex;
     flex-wrap: wrap;
-    margin: 2rem auto;
+    margin: 1rem auto;
     max-width: 600px;
     min-width: 250px;
     text-align: center;
