@@ -1,7 +1,9 @@
 .bd-container {
-    background-color: rgba(244, 250, 252, 0.916);
-    margin: 1rem;
+    background-color: white;
     border-radius: 10px;
+    width: 70%;
+    margin: auto;
+
 }
 
 .birth-heading {
@@ -9,7 +11,7 @@
     margin-bottom: 0;
     margin-top: 5rem;
     padding: 10px;
-    color: rgb(65, 65, 215);
+    color: #1e293b;
 }
 
 .birthdays {
@@ -23,7 +25,7 @@
 }
 
 .birthdays::-webkit-scrollbar {
-    display: none; 
+    display: none;
 }
 
 .birthday {

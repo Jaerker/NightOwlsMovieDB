@@ -11,7 +11,7 @@ function Card({ movie }) {
 	return (
 		<Link to={`/movie/${movie.id}`} className='card' style={cardClass}>
 			<section className='card__top-right-buttons'>
-				<RoundButton className='round-button' content={<img src={Plus} alt='Plus icon' />} onClick={() => { }} />
+				<RoundButton className='round-button' content={<img className='plus' src={Plus} alt='Plus icon' />} onClick={() => { }} />
 				<RoundButton className='round-button' content={<img src={Star} alt='Star icon' />} onClick={() => { }} />
 			</section>
 			<h3 className='movie-title'>{movie.title}</h3>
