@@ -24,9 +24,9 @@ function Navbar() {
 						Watchlist
 					</li>
 				</Link>
-				<Link to='/trending'>
+				<Link to='/recommend'>
 					<li className='navigation-field__nav-item'>
-						Trending
+						Recommend
 					</li>
 				</Link>
 			</ul>

@@ -10,8 +10,8 @@ import WatchlistPage from './pages/watchlistPage/WatchlistPage';
 import SingleMoviePage from './pages/singleMoviePage/SingleMoviePage';
 import FavouritesPage from './pages/favouritesPage/FavouritesPage';
 import GenresPage from './pages/genresPage/GenresPage';
+import RecommendPage from './pages/recommendPage/RecommendPage';
 import './App.css';
- 
 
 function App() {
 
@@ -32,6 +32,7 @@ function App() {
 					<Route path='/watchlist' element={<WatchlistPage />} />
 					<Route path='/favourites' element={<FavouritesPage />} />
 					<Route path='/movie/:id' element={<SingleMoviePage />} />
+					<Route path='/recommend' element={<RecommendPage />} />
 				</Routes>
 			</main>
 
