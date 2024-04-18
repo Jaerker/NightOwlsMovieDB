@@ -1,5 +1,6 @@
-import './App.css';
+import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import local from './api/local';
 
 import Navbar from './components/navbar/Navbar';
 import Header from './components/header/Header';
@@ -9,9 +10,12 @@ import WatchlistPage from './pages/watchlistPage/WatchlistPage';
 import SingleMoviePage from './pages/singleMoviePage/SingleMoviePage';
 import FavouritesPage from './pages/favouritesPage/FavouritesPage';
 import GenresPage from './pages/genresPage/GenresPage';
+import './App.css';
+ 
 
 function App() {
 
+	
 
 
 	return (
