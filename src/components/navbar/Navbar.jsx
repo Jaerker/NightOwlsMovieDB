@@ -5,7 +5,7 @@ import './navbar.css'
 function Navbar() {
 	return (
 		<nav className='navigation-field'>
-			<img src={Logo} alt='Företagslogga, bild på en uggla.' />
+			<img src={Logo} alt='Företagslogga, bild på en uggla.' className="logo"/>
 			<ul className='navigation-field__nav-list'>
 				<Link to='/'>
 					<li className='navigation-field__nav-item'>

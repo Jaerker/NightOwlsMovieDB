@@ -1,0 +1,42 @@
+.tests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.test {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 230px;
+    height: 300px;
+    padding: 1rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.test:hover {
+    box-shadow: 1px 1px 9px 3px rgba(93, 150, 237, 0.716);
+    transform: translateY(2px);
+}
+
+@media (max-width: 1314px) {
+    .test {
+        width: 180px;
+        height: 270px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .test {
+        width: 250px;
+        height: 270px;
+    }
+}

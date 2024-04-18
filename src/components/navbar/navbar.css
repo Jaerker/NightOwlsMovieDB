@@ -2,8 +2,12 @@ a{
     text-decoration: none;
 }
 
+.logo {
+    margin: 1rem 0 2rem 0;
+}
+
 .navigation-field{
-    background:var(--c-black);
+    background: rgba(21, 21, 61, 0.824);
     grid-area:nav;
     max-width:300px;
 }
@@ -27,10 +31,10 @@ a{
     color:var(--c-white);
 
     cursor:pointer;
-    background: var(--c-navbar-btn);
+    background: rgba(182, 44, 232, 0.568);
     transition: background .2s, border-color .2s;
 }
 .navigation-field__nav-item:hover{
-    background:var(--c-dark-blue);
+    background: rgba(181, 23, 238, 0.971);
     border-color: var(--c-blue);
 }
