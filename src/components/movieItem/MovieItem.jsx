@@ -1,11 +1,15 @@
 import './movieItem.css';
 import agent from '../../api/agent';
+import local from '../../api/local';
 import { useState, useEffect } from 'react';
+import { isInFavourites, isInWatchlist } from '../../controller/controller';
 
 function MovieItem({ id }) {
     const [movieDetails, setMovieDetails] = useState(null);
     const [trailerUrl, setTrailerUrl] = useState(null);
     const [loading, setLoading] = useState(true); // Add this line
+    const [favourited, setFavourited] = useState(true);
+    const [watchlisted, setWatchlisted] = useState(true);
 
     useEffect(() => {
         const fetchMovieDetails = async () => {
@@ -22,6 +26,8 @@ function MovieItem({ id }) {
                             trailer = `https://www.youtube.com/embed/${videoId}`;
                             setTrailerUrl(trailer);
                         }
+                        setFavourited(isInFavourites(details.id));
+                        setWatchlisted(isInWatchlist(details.id));
                     }
                     // Lägger till setTimeout för att slippa ha 
                     // "Could not find the movie" medans sida laddas
@@ -29,11 +35,25 @@ function MovieItem({ id }) {
                 } catch (err) {
                     console.error(err);
                 }
-            }
+            }    
         };
-
         fetchMovieDetails();
     }, [id]);
+    
+    const handleButtonPress = (e) => {
+        console.log(e.target.id);
+        switch(e.target.id){
+            case 'favourites':
+                favourited ? local.favourites.remove(movieDetails) : local.favourites.add(movieDetails);
+                setFavourited(prevValue => !prevValue);
+                break;
+            case 'watchlist':
+                watchlisted ? local.watchlist.remove(movieDetails) : local.watchlist.add(movieDetails);
+                setWatchlisted(prevValue => !prevValue);
+                break;
+
+        }
+    }
 
     // setTimeout hjälper inte varje gång, därför har vi "Loading",
     // annars visar det "Could not find movie" när sidan laddas om
@@ -44,6 +64,7 @@ function MovieItem({ id }) {
     if (!movieDetails) {
         return <div>Could not find the movie...</div>;
     }
+
 
     return (
         <div className="movie-container">
@@ -72,8 +93,8 @@ function MovieItem({ id }) {
                                                 className="movie-info-link">Visit Homepage</a>}
                     <p>{movieDetails.overview}</p>
                     <div className="single-movie-buttons">
-                        <button className="movie-button">Add to Favourites</button>
-                        <button className="movie-button">Add to Watchlist</button>
+                        <button id="favourites" className="movie-button" onClick={handleButtonPress}>{favourited ? 'Remove from Favourites' : 'Add to Favourites'}</button>
+                        <button id="watchlist" className="movie-button" onClick={handleButtonPress}>{watchlisted ? 'Remove from Watchlist' : 'Add to Watchlist'}</button>
                     </div>
                 </div>
             </div>

@@ -5,16 +5,13 @@ import { useEffect, useState } from 'react';
 import local from '../../api/local';
 
 function WatchlistPage() {
-	const [watchlistItems, setWatchlistItems] = useState([]);
+	const [watchlistItems, setWatchlistItems] = useState(local.watchlist.get());
 
-	useEffect(()=> {
-		setWatchlistItems(local.watchlist.get());
-	}, [watchlistItems]);
  
 	return (
 	<>
 		<h1>Watchlist</h1>
-		<CardContainer list={watchlistItems} />
+		<CardContainer list={watchlistItems} setList={setWatchlistItems} />
 	</>	
 	);
 }

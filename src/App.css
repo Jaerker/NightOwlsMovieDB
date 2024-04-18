@@ -41,3 +41,11 @@
     color: var(--c-light-blue);
     font-weight: 700;
 }
+
+.loading-message{
+    font-weight:700;
+    font-size:1.5rem;
+    color:var(--c-white);
+    text-align: center;
+    margin-top: 40vh;
+}

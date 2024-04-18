@@ -5,15 +5,15 @@ import { useEffect, useState } from 'react';
 import local from '../../api/local';
 
 function FavouritesPage() {
-	const [favourites, setFavourites] = useState([]);
+	const [favourites, setFavourites] = useState(local.favourites.get());
 	useEffect(()=> {
 		setFavourites(local.favourites.get());
-	}, [favourites]);
+	}, []);
  
 	return (
 	<>
 		<h1>Favourites</h1>
-		<CardContainer list={favourites} />
+		<CardContainer list={favourites} setList={setFavourites} />
 	</>	
 	);
 }
