@@ -1,0 +1,27 @@
+.genre__buttons {
+    padding: 10px 20px 10px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    background-color: #1e293b;
+    color: white;
+    margin: 5px 2px 5px 2px;
+    cursor: pointer;
+    outline: none;
+}
+
+button:active {
+    background-color: white;
+    color: black;
+}
+
+.genre__buttons:hover {
+    background-color: white;
+    color: black;
+}
+
+.button__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}

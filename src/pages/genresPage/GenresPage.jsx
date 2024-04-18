@@ -1,6 +1,15 @@
+import GenreButtons from "../../components/genreButtons/GenreButtons";
+
+
 function GenresPage() {
     return (
-        <div>GenresPage</div>
+        <div>
+            <GenreButtons />
+            <h1>Genres</h1>
+
+
+        </div>
+
     );
 }
 
