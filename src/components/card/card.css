@@ -19,7 +19,8 @@
     bottom:0px;
     margin-bottom:1.5rem;
     width:70%;   
-    pointer-events: none; 
+    user-select:none;
+    cursor:pointer;
 }
 .card:hover{
     transform: scale(1.05);
