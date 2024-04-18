@@ -12,13 +12,13 @@
     color: var(--c-white);
     transition: all 0.3s;
 }
-
-.movie-title {
-    position: absolute;
-    bottom: 0px;
-    margin-bottom: 1.5rem;
-    width: 70%;
-    pointer-events: none;
+.movie-title{
+    position:absolute;
+    bottom:0px;
+    margin-bottom:1.5rem;
+    width:70%;   
+    user-select:none;
+    cursor:pointer;
 }
 
 .card:hover {

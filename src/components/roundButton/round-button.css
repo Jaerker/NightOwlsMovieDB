@@ -1,19 +1,52 @@
-.round-button {
-    display: grid;
-    place-content: center;
-    width: 30px;
-    height: 30px;
+.card__top-right-buttons{
+    display:flex;
+    position:absolute;
+    right:1rem;
+    gap: .5rem;
+}
+.round-button{
+    display:grid;
+    place-content:center;
+    place-items:center;
+    width:30px;
+    height:30px;
     border-radius: 50%;
-    background-color: var(--c-black);
+    
+    background-color: var(--c-dark-grey);
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
     color: var(--c-white);
     cursor: pointer;
 }
+.round-button__plus-icon,
+.round-button__minus-icon{
+    pointer-events:none;
+    user-select: none;
+    position:absolute; 
+    transition:height .2s;
+    height:20px;
+}
+.round-button__plus-icon--disabled{
+    height:0;
+}
+.round-button__watchlist-wrapper{
+    position:relative;
+    display:grid;
+    place-content: center;
+    width:100%;
+    height:100%;
+}
 
-.card__top-right-buttons {
-    display: flex;
-    position: absolute;
-    right: 0.8rem;
-    gap: .5rem;
+.round-button__favourites{
+    pointer-events:none;
+    user-select: none;
+    width:20px;
+    transition: filter .2s, transform .2s;
+}
+.round-button__favourites--true{
+    transform:scale(1.1);
+}
+.round-button__favourites--false{
+    filter: brightness(0) invert(1);
 }
 
 .plus {
@@ -21,17 +54,17 @@
     height: 20px;
 }
 
-.card__top-right-buttons img {
+/* .card__top-right-buttons img {
     width: 25px;
-}
-
+} */
 
 .round-button--rating {
     cursor: default;
     position: absolute;
     border: solid 1px var(--c-white);
-    bottom: 1rem;
-    right: 1rem;
+    bottom:1rem;
+    right:1rem;
+    pointer-events: none;
 }
 
 .rating {
