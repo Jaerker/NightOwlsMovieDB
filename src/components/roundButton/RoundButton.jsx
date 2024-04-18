@@ -1,8 +1,8 @@
 import './round-button.css';
 
-function RoundButton({content = '', onClick = () => {}, className = ''}) {
+function RoundButton({content = '', className = ''}) {
   return (
-    <section className={className} onClick={onClick}>
+    <section className={className} >
         {content}
     </section>
   );
