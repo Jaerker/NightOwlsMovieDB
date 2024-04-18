@@ -10,13 +10,10 @@ function FavouritesPage() {
 		setFavourites(local.favourites.get());
 	}, [favourites]);
  
-
 	return (
 	<>
 		<h1>Favourites</h1>
 		<CardContainer list={favourites} />
-
-		
 	</>	
 	);
 }
