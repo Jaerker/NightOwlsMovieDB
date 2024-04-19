@@ -1,36 +1,42 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import agent from '../../api/agent';
+
 import './GenreButtons.css';
+import GenreButton from '../genreButton/GenreButton';
 
 
-const GenreButtons = ({ onSelectGenre }) => {
+const GenreButtons = ({ selectedGenres, setSelectedGenres }) => {
     const [genres, setGenres] = useState([]);
 
     useEffect(() => {
-        const fetchGenres = async () => {
-            try {
-                const genresList = await agent.list.getGenres();
-                setGenres(genresList);
-            } catch (error) {
-                console.error('Error fetching genres:', error);
-            }
-        };
-
-        fetchGenres();
+        setupGenres();
     }, []);
+
+    const setupGenres = async () => {
+        const data = await agent.list.getGenres()
+        setGenres(data);
+    }
+    const handleGenreButton = (e, setIsActive) => {
+        if (selectedGenres.includes(e.target.id)) {
+            setSelectedGenres(selectedGenres.filter(genre => genre !== e.target.id));
+        } else {
+            setSelectedGenres([...selectedGenres, e.target.id]);
+        }
+        setIsActive(prevValue => !prevValue);
+        console.log(selectedGenres);
+
+    }
+
 
     return (
         <div className='button__container'>
-            {genres.map(genre => (
-                <button className='genre__buttons'
-                    key={genre.id}
-                    onClick={() => onSelectGenre(genre.id)}
-                >
-                    {genre.name}
-                </button>
+            
+            {genres.map((genre, index) => (
+                <GenreButton key={index} id={genre.id} name={genre.name} onClick={handleGenreButton} />
             ))}
         </div>
     );
 };
 
 export default GenreButtons;
+

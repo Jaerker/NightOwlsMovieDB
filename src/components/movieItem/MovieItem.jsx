@@ -93,8 +93,8 @@ function MovieItem({ id }) {
                                                 className="movie-info-link">Visit Homepage</a>}
                     <p>{movieDetails.overview}</p>
                     <div className="single-movie-buttons">
-                        <button id="favourites" className="movie-button" onClick={handleButtonPress}>{favourited ? 'Remove from Favourites' : 'Add to Favourites'}</button>
-                        <button id="watchlist" className="movie-button" onClick={handleButtonPress}>{watchlisted ? 'Remove from Watchlist' : 'Add to Watchlist'}</button>
+                        <button id="favourites" className={`movie-button ${favourited ? 'toggle-button--active' : 'toggle-button--inactive'}`} onClick={handleButtonPress}>{favourited ? 'Remove from Favourites' : 'Add to Favourites'}</button>
+                        <button id="watchlist" className={`movie-button ${watchlisted ? 'toggle-button--active' : 'toggle-button--inactive'}`} onClick={handleButtonPress}>{watchlisted ? 'Remove from Watchlist' : 'Add to Watchlist'}</button>
                     </div>
                 </div>
             </div>

@@ -1,12 +1,11 @@
 import CardContainer from '../../components/cardContainer/CardContainer';
 import './watchlist-page.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import local from '../../api/local';
 
 function WatchlistPage() {
 	const [watchlistItems, setWatchlistItems] = useState(local.watchlist.get());
-
  
 	return (
 	<>

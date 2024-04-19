@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import CardContainer from '../../components/cardContainer/CardContainer';
 import agent from '../../api/agent';
-import Card from '../../components/card/Card';
 
 function RecommendPage() {
     const [results, setResults] = useState([]);
@@ -32,6 +31,7 @@ function RecommendPage() {
 
     return (
         <>
+            <h1>Recommended movies</h1>
             {loading ? (
                 <p className="loading-message">Loading...</p>
             ) : results.length > 0 ? (

@@ -3,8 +3,6 @@ import { useParams } from 'react-router-dom'
 import agent from '../../api/agent';
 import CardContainer from '../../components/cardContainer/CardContainer';
 
-
-
 function SearchResultPage() {
 	const { searchValue } = useParams();
 	const [results, setResults] = useState([]);
