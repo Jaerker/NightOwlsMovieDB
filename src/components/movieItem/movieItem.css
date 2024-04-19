@@ -1,7 +1,9 @@
 .movie-container {
     display: grid;
     grid-template-areas: 'top top'
-                        'bottom bottom';
+                        'bottom bottom'
+                        'may-like may-like'
+                        'suggested suggested';
 }
 
 .single-movie-item {
@@ -83,4 +85,52 @@ iframe {
 
 .no-movie-msg {
     align-self: center;
+}
+
+.suggestions {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 2rem;
+    gap: 2rem;
+    grid-area: suggested;
+}
+
+.suggested-movie {
+    aspect-ratio: 1 / 1.65;
+    width: 220px;
+    padding: 1rem;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    background-color: #fff;
+    background-position: center;
+    background-size: cover;
+    color: var(--c-white);
+    transition: all 0.3s;
+    margin: 1rem;
+}
+
+.suggested-poster {
+    display: flex;
+    max-width: 200px;
+    min-width: 100px;
+    border-radius: 1rem;
+    margin-bottom: 0;
+}
+
+.suggested-name {
+    font-size: 16px;
+    text-align: center;
+}
+
+.may-like {
+    margin-top: 2rem;
+    text-align: center;
+    color: rgb(65, 65, 215);
+    font-size: 30px;
+    grid-area: may-like;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
 }

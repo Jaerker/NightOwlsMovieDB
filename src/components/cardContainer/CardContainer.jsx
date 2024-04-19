@@ -37,7 +37,7 @@ function CardContainer({ list, setList = null }) {
 				return (
 					<Card key={movie.id} movie={movie} handlePress={handleButtonPress} />
 				);
-			}) : <h1>No movies found</h1>}
+			}) : <h1 className="loading-message">No movies found</h1>}
 		</article>
 	);
 }
