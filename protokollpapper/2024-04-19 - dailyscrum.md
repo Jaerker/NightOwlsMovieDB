@@ -1,4 +1,4 @@
-# Daily Scrum 2024-xx-xx
+# Daily Scrum 2024-04-19
 
 ## Närvarande:
 * Sandra
