@@ -5,14 +5,14 @@ axios.defaults.baseURL = 'https://api.themoviedb.org/3';
 axios.defaults.headers['Authorization'] = `Bearer ${authenticationKey}`;
 
 const list = {
-    searchByGenre : (genreId, page=1) => axios.get(`/discover/movie?include_adult=false&include_video=false&language=en-US&page=${page}&with_genres=${genreId}`).then(res => res.data).catch(() => null),
-    searchByTitle : (title, page=1) => axios.get(`/search/movie?query=${title}&include_adult=false&page=${page}`).then(res => res.data).catch(() => null),
-    getTopRated : (page =1) => axios.get(`/discover/movie?include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=popularity.desc`).then(res => res.data).catch(() => null),
-    getTrending : (page = 1) => axios.get(`/trending/movie/week?include_adult=false&page=${page}`).then(res => res.data).catch(() => null),
-	getPopular: (page = 1) => axios.get(`/movie/popular?include_adult=false&page=${page}`).then(res => res.data).catch(() => null),
-	getGenres: () => axios.get(`/genre/movie/list?include_adult=false`).then(res => res.data.genres).catch(() => null),
-	getRecommendations: (id, page=1) => axios.get(`/movie/${id}/recommendations?include_adult=false&page=${page}`).then(res => res.data).catch(() => null),
-	getUpcoming: (page = 1) => axios.get(`/movie/upcoming?include_adult=false&page=${page}`).then(res => res.data).catch(() => null),
+    searchByGenre : (genreId, page=1) => axios.get(`/discover/movie?include_adult=false&include_video=false&language=en-US&page=${page}&with_genres=${genreId}`).then(res => res.data).catch(err => console.log(err)),
+    searchByTitle : (title, page=1) => axios.get(`/search/movie?query=${title}&include_adult=false&page=${page}`).then(res => res.data).catch(err => console.log(err)),
+    getTopRated : (page =1) => axios.get(`/discover/movie?include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=popularity.desc`).then(res => res.data).catch(err => console.log(err)),
+    getTrending : (page = 1) => axios.get(`/trending/movie/week?include_adult=false&page=${page}`).then(res => res.data).catch(err => console.log(err)),
+	getPopular: (page = 1) => axios.get(`/movie/popular?include_adult=false&page=${page}`).then(res => res.data).catch(err => console.log(err)),
+	getGenres: () => axios.get(`/genre/movie/list?include_adult=false`).then(res => res.data.genres).catch(err => console.log(err)),
+	getRecommendations: (id, page=1) => axios.get(`/movie/${id}/recommendations?include_adult=false&page=${page}`).then(res => res.data).catch(err => console.log(err)),
+	getUpcoming: (page = 1) => axios.get(`/movie/upcoming?include_adult=false&page=${page}`).then(res => res.data).catch(err => console.log(err)),
 }
 
 const movie = {
