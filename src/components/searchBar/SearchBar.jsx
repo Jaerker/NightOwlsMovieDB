@@ -7,9 +7,7 @@ const SearchBar = () => {
 	const [input, setInput] = useState('');
 
 	const fetchData = async (value) => {
-		const data = await agent.list.searchByTitle(value);
-
-		console.log(data);
+		await agent.list.searchByTitle(value);
 	};
 
 	const handleSearch = (value) => {
