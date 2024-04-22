@@ -56,7 +56,6 @@ function MovieItem({ id }) {
     }, [id]);
 
     const handleButtonPress = (e) => {
-        console.log(e.target.id);
         switch (e.target.id) {
             case 'favourites':
                 favourited ? local.favourites.remove(movieDetails) : local.favourites.add(movieDetails);

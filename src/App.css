@@ -55,9 +55,6 @@ h1{
 .toggle-button--active {
     background-color: #bd49d7;
 }
-.toggle-button--active:hover {
-    background-color: rgb(89, 89, 248);
-}
 .toggle-button--inactive {
     background-color: rgb(89, 89, 248);
 }

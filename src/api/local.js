@@ -36,14 +36,15 @@ const requests = {
         return true;
     },
     delete: (key, value) => { // Tar bort data från localstorage
+        console.log(value);
         const data = requests.get(key);
-        if(data.find(movie => movie.id !== value.id)){ // Om det inte finns någon film med det id som skickas in så returnerar vi false
-            return false;
-        }
-        const newData = data.filter(movie => movie.id !== value.id); // Filtrerar bort objektet med det id som skickas in
+        if(data.find(movie => movie.id === value.id)){ // Om det inte finns någon film med det id som skickas in så returnerar vi false
+            const newData = data.filter(movie => movie.id !== value.id); // Filtrerar bort objektet med det id som skickas in
 
-        localStorage.setItem(key, JSON.stringify(newData)); // Sparar arrayen i localstorage
-        return true; // Returnerar true om objektet har tagits bort
+            localStorage.setItem(key, JSON.stringify(newData)); // Sparar arrayen i localstorage
+            return true; // Returnerar true om objektet har tagits bort    
+        }
+        return false;
     }
 }
 

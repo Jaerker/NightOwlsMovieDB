@@ -23,7 +23,6 @@ const GenreButtons = ({ selectedGenres, setSelectedGenres }) => {
             setSelectedGenres([...selectedGenres, e.target.id]);
         }
         setIsActive(prevValue => !prevValue);
-        console.log(selectedGenres);
 
     }
 
