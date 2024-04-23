@@ -24,8 +24,6 @@ function MovieItem({ id }) {
                     if (details) {
                         setMovieDetails(details);
                         if (trailer) {
-                            // Måste kovertera url till embed url för att kunna se trailer i vår SPA
-                            // istället för att öppna ny tab med youtube
                             const videoId = new URL(trailer).searchParams.get('v');
                             trailer = `https://www.youtube.com/embed/${videoId}`;
                             setTrailerUrl(trailer);
@@ -85,8 +83,6 @@ function MovieItem({ id }) {
                 style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(https://image.tmdb.org/t/p/w500${movieDetails.backdrop_path})` }}
                 aria-label={`Background image of the movie ${movieDetails.original_title}`}>
                 <div className="movie-poster" >
-                    {/* Kollar om det finns poster,
-                    renderar "No poster was found" text ifall det saknas */}
                     {movieDetails.poster_path ? (
                         <img src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
                             alt={`${movieDetails.original_title} movie poster`}
@@ -97,13 +93,11 @@ function MovieItem({ id }) {
                 </div>
                 <div className="movie-info">
                     <h1>{movieDetails.original_title}</h1>
-                    {/* Visar tagline bara om det finns */}
                     {movieDetails.tagline && <h2>{movieDetails.tagline}</h2>}
                     <p>Runtime: {movieDetails.runtime} minutes</p>
                     <p>Rating: {movieDetails.vote_average}</p>
                     <p>Genre: {movieDetails.genres
                         && movieDetails.genres.map((genre) => genre.name).join(', ')}</p>
-                    {/* Visar homepage länk bara om det finns */}
                     {movieDetails.homepage && <a href={movieDetails.homepage}
                         className="movie-info-link">Visit Homepage</a>}
                     <p>{movieDetails.overview}</p>
@@ -113,7 +107,6 @@ function MovieItem({ id }) {
                     </div>
                 </div>
             </div>
-            {/* Visar trailer div bara om trailer finns */}
             {trailerUrl && (
                 <div className="trailer">
                     <iframe
