@@ -21,40 +21,32 @@ const requests = {
             return false;
         }
         
-        if (compareKeys(value, 'isList')) { // Kollar om nycklarna i objektet matchar nycklarna i listMovieObject. I så fall hämtar vi hem en detaljerad version av film objektet och sparar. 
-            agent.movie.getDetails(value.id).then(response => { // Hämtar detaljerad information om filmen
+        if (compareKeys(value, 'isList')) { 
+            agent.movie.getDetails(value.id).then(response => { 
                 data.push(response);
-                localStorage.setItem(key, JSON.stringify(data)); // Sparar arrayen i localstorage
+                localStorage.setItem(key, JSON.stringify(data)); 
             });
         }
         else{
             data.push(value);
-            localStorage.setItem(key, JSON.stringify(data)); // Sparar arrayen i localstorage
-            
+            localStorage.setItem(key, JSON.stringify(data));
         }
 
         return true;
     },
-    delete: (key, value) => { // Tar bort data från localstorage
+    delete: (key, value) => { 
         console.log(value);
         const data = requests.get(key);
-        if(data.find(movie => movie.id === value.id)){ // Om det inte finns någon film med det id som skickas in så returnerar vi false
-            const newData = data.filter(movie => movie.id !== value.id); // Filtrerar bort objektet med det id som skickas in
+        if(data.find(movie => movie.id === value.id)){ 
+            const newData = data.filter(movie => movie.id !== value.id); 
 
-            localStorage.setItem(key, JSON.stringify(newData)); // Sparar arrayen i localstorage
-            return true; // Returnerar true om objektet har tagits bort    
+            localStorage.setItem(key, JSON.stringify(newData)); 
+            return true;
         }
         return false;
     }
 }
 
-/**
- * @description Jämför nycklarna i ett objekt med nycklarna i ett annat objekt
- * @param {Object} a - Objektet som ska jämföras
- * @param {String} comparison - Vilket objekt som ska jämföras, antingen 'isList' eller 'isDetailed' Skickas inget värde in så jämförs objektet med listMovieObject
- * @returns True om nycklarna i objekten matchar, annars false
- * 
- */
 function compareKeys(a, comparison = "isList") {
     const listMovieObject = {
         adult : false,
