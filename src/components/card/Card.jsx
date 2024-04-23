@@ -17,15 +17,18 @@ function Card({ movie, handlePress }) {
 	return (
 		<article onClick={(e) => handlePress(e, movie, setFavourited, setWatchlisted)} className='card' style={cardClass}>
 			<section className='card__top-right-buttons'>
-				<RoundButton className='round-button round-button--watchlist' content={
-				<>
+				<RoundButton className='round-button round-button--watchlist'>
 					<img className={`round-button__plus-icon ${watchlisted ? 'round-button__plus-icon--disabled' : 'round-button__plus-icon--enabled'}`} src={Plus} alt='Plus icon' />
 					<img className='round-button__minus-icon' src={Minus} alt='Minus icon' />
-				</>} />
-				<RoundButton className='round-button round-button--favourites' content={<img className={`round-button__favourites ${favourited ? 'round-button__favourites--true' : 'round-button__favourites--false'}`} src={Star} alt='Star icon' />} onClick={() => { }} />
+				</RoundButton>
+				<RoundButton className='round-button round-button--favourites'>
+					<img className={`round-button__favourites ${favourited ? 'round-button__favourites--true' : 'round-button__favourites--false'}`} src={Star} alt='Star icon' /> 
+				</RoundButton>
 			</section>
 			<h3 className='movie-title'>{movie.title}</h3>
-			<RoundButton className='round-button round-button--rating' content={<h3 className='rating'>{Math.round(movie.vote_average * 10) / 10}</h3>}/>
+			<RoundButton className='round-button round-button--rating'>
+				<h3 className='rating' style={ratingColor}>{movieRating}</h3>
+			</RoundButton>
 		</article>
 	);
 }
