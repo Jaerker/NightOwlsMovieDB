@@ -14,6 +14,9 @@ function Card({ movie, handlePress }) {
 	const [watchlisted, setWatchlisted] = useState(isInWatchlist(movie.id));
 
 	const cardClass = { backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, .8) 100%), url(https://image.tmdb.org/t/p/w500${movie.poster_path})` };
+	const movieRating = (Math.round(movie.vote_average * 10) / 10).toString().length === 1 ? (Math.round(movie.vote_average * 10) / 10).toFixed(1) : Math.round(movie.vote_average * 10) / 10; 
+	const ratingColor = { color: `rgb(${255-(255 * (Math.round(movie.vote_average * 10) / 100))}, ${0+(255 * (Math.round(movie.vote_average * 10) / 100))}, 0)` };
+	
 	return (
 		<article onClick={(e) => handlePress(e, movie, setFavourited, setWatchlisted)} className='card' style={cardClass}>
 			<section className='card__top-right-buttons'>
