@@ -1,0 +1,42 @@
+a {
+    text-decoration: none;
+}
+
+.logo {
+    margin: 1rem 0 2rem 0;
+    width: 260px;
+
+}
+
+.navigation-field {
+    background: rgba(21, 21, 61, 0.824);
+    grid-area: nav;
+    max-width: 260px;
+}
+
+.navigation-field__nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.navigation-field__nav-item {
+    width: 90%;
+    margin: auto;
+    padding: 1rem 0;
+    border: solid 2px transparent;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--c-white);
+    cursor: pointer;
+    background: rgba(182, 44, 232, 0.568);
+    transition: background .2s, border-color .2s;
+}
+
+.navigation-field__nav-item:hover {
+    background: rgba(181, 23, 238, 0.971);
+    border-color: var(--c-blue);
+}

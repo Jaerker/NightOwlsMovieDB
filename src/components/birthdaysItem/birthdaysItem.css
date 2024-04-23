@@ -1,0 +1,60 @@
+.bd-container {
+    background-color: white;
+    border-radius: 10px;
+    width: 70%;
+    margin: auto;
+}
+
+.birth-heading {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 5rem;
+    padding: 10px;
+    color: rgb(65, 65, 215);
+}
+
+.birthdays {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+    max-width: 600px;
+    min-width: 250px;
+    text-align: center;
+    font-size: 11px;
+}
+
+.birthdays::-webkit-scrollbar {
+    display: none;
+}
+
+.birthday {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    cursor: pointer;
+    color: black;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.birthday:hover {
+    transform: scale(1.1)
+}
+
+.birthday-image {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    border-radius: 10%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+
+.birthday-name {
+    padding: 7px;
+}
