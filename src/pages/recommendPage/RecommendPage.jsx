@@ -29,7 +29,7 @@ function RecommendPage() {
         <>
             <h1>Recommended movies</h1>
             {loading ? (
-                <p className="loading-message">Loading...</p>
+                <p className='loading-message'>Loading...</p>
             ) : results.length > 0 ? (
                 <CardContainer list={results} />
             ) : (

@@ -1,4 +1,4 @@
-import agent from "./agent";
+import agent from './agent';
 
 const requests = {
     get: (key) => { // Hämtar data från localstorage
@@ -47,19 +47,19 @@ const requests = {
     }
 }
 
-function compareKeys(a, comparison = "isList") {
+function compareKeys(a, comparison = 'isList') {
     const listMovieObject = {
         adult : false,
-        backdrop_path : "/xOMo8BRK7PfcJv9JCnx7s5hj0PX.jpg",
-        genre_ids : "data",
+        backdrop_path : '/xOMo8BRK7PfcJv9JCnx7s5hj0PX.jpg',
+        genre_ids : 'data',
         id : 693134,
-        original_language : "en",
-        original_title : "Dune: Part Two",
-        overview : "Follow the mythic journey of Paul Atreides as he unites with Chani and the Fremen while on a path of revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the known universe, Paul endeavors to prevent a terrible future only he can foresee.",
+        original_language : 'en',
+        original_title : 'Dune: Part Two',
+        overview : 'Follow the mythic journey of Paul Atreides as he unites with Chani and the Fremen while on a path of revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the known universe, Paul endeavors to prevent a terrible future only he can foresee.',
         popularity : 3437.313,
-        poster_path : "/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg",
-        release_date : "2024-02-27",
-        title : "Dune: Part Two",
+        poster_path : '/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg',
+        release_date : '2024-02-27',
+        title : 'Dune: Part Two',
         video: false,
         vote_average: 8.308,
         vote_count: 2900 
@@ -67,28 +67,28 @@ function compareKeys(a, comparison = "isList") {
     
     const detailedMovieObject = {
         adult : false,
-        backdrop_path : "/xOMo8BRK7PfcJv9JCnx7s5hj0PX.jpg",
+        backdrop_path : '/xOMo8BRK7PfcJv9JCnx7s5hj0PX.jpg',
         belongs_to_collection : {id: 726871, name: 'Dune Collection', poster_path: '/wcVafar6Efk3YgFvh8oZQ4yHL6H.jpg', backdrop_path: '/ygVSGv86R0BTOKJIb8RQ1sFxs4q.jpg'},
         budget : 190000000,
         genres : [{id: 12, name: 'Adventure'}, {id: 878, name: 'Science Fiction'}],
-        homepage : "https://www.dunemovie.com",
+        homepage : 'https://www.dunemovie.com',
         id : 693134,
-        imdb_id : "tt15239678",
+        imdb_id : 'tt15239678',
         origin_country : ['US'],
-        original_language : "en",
-        original_title : "Dune: Part Two",
-        overview : "Follow the mythic journey of Paul Atreides as he unites with Chani and the Fremen while on a path of revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the known universe, Paul endeavors to prevent a terrible future only he can foresee.",
+        original_language : 'en',
+        original_title : 'Dune: Part Two',
+        overview : 'Follow the mythic journey of Paul Atreides as he unites with Chani and the Fremen while on a path of revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the known universe, Paul endeavors to prevent a terrible future only he can foresee.',
         popularity : 3437.313,
-        poster_path : "/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg",
+        poster_path : '/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg',
         production_companies : [{id: 9993, logo_path: '/2Tc1P3Ac8M479naPp1kYT3izLS5.png', name: 'Legendary Entertainment', origin_country: 'US'}, {id: 9996, logo_path: '/3tvBqYsBhxWeHlu62SIJ1el93O7.png', name: 'Warner Bros. Pictures', origin_country: 'US'}],
         production_countries : [{iso_3166_1: 'US', name: 'United States of America'}],
-        release_date : "2024-02-27",
+        release_date : '2024-02-27',
         revenue: 683813734,
         runtime : 167,
         spoken_languages: [{english_name: 'English', iso_639_1: 'en', name: 'English'}],
-        status : "Released",
-        tagline : "Long live the fighters.",
-        title : "Dune: Part Two",
+        status : 'Released',
+        tagline : 'Long live the fighters.',
+        title : 'Dune: Part Two',
         video : false,
         vote_average : 8.304,
         vote_count : 2909,

@@ -53,9 +53,9 @@ function NewsItem() {
 
     return (
         <>
-            <h1 className="news-header">Movie news</h1>
-            <div className="news">
-            <button onClick={handlePrev} className="previous-btn">Prev</button>
+            <h1 className='news-header'>Movie news</h1>
+            <div className='news'>
+            <button onClick={handlePrev} className='previous-btn'>Prev</button>
             {newsItems.map((item, index) => (
                 <div 
                     key={index} 
@@ -65,15 +65,15 @@ function NewsItem() {
                     aria-label={isFlipped[index] ? item.title : ''}>
                     {!isFlipped[index] && (
                         <>
-                            <h2 className="news-heading">{item.title}</h2>
-                            <p className="news-text">{item.text}</p>
-                            <p className="news-date">{item.date}</p>
-                            <p className="news-author">{item.author}</p>
+                            <h2 className='news-heading'>{item.title}</h2>
+                            <p className='news-text'>{item.text}</p>
+                            <p className='news-date'>{item.date}</p>
+                            <p className='news-author'>{item.author}</p>
                         </>
                     )}
                 </div>
             ))}
-            <button onClick={handleNext} className="next-btn">Next</button>
+            <button onClick={handleNext} className='next-btn'>Next</button>
         </div>
         </>
     )

@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import GenreButtons from "../../components/genreButtons/GenreButtons";
-import agent from "../../api/agent";
-import CardContainer from "../../components/cardContainer/CardContainer";
+import { useState, useEffect } from 'react';
+import GenreButtons from '../../components/genreButtons/GenreButtons';
+import agent from '../../api/agent';
+import CardContainer from '../../components/cardContainer/CardContainer';
 
 function GenresPage() {
     const [selectedGenres, setSelectedGenres] = useState([]);
