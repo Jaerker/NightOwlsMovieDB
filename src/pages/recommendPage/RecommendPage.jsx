@@ -6,11 +6,7 @@ import agent from '../../api/agent';
 function RecommendPage() {
     const [results, setResults] = useState([]);
     const [loading, setLoading] = useState(true);
-    // Använder location för att rendera om sidan varje gång det besöks 
-    //(page reload eller tryck på Recommend knapp i navbar)
     const location = useLocation();
-    // Key ändras varje gång sidan besöks, 
-    // när key ändras - görs de ny api anrop med random sida nummer i useEffect
     const [key, setKey] = useState(location.key);
 
     const getTrending = async (page) => {
