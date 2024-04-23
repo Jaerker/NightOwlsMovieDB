@@ -1,9 +1,9 @@
 import './round-button.css';
 
-function RoundButton({content = '', className = ''}) {
+function RoundButton({className = '', children}) {
   return (
     <section className={className} >
-        {content}
+        {children}
     </section>
   );
 }
