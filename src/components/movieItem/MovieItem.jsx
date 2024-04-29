@@ -125,7 +125,7 @@ function MovieItem({ id }) {
                     ></iframe>
                 </div>
             )}
-            <p className="may-like">You may also like</p>
+            <h1 className="may-like">You may also like</h1>
             <div className="suggestions">
                 {suggest && suggest.results.slice(0, 4).map(movie => (
                     <Link to={`/movie/${movie.id}`} key={movie.id}>
